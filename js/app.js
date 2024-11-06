@@ -73,10 +73,15 @@ document.querySelector('form').addEventListener('submit', function(event) {
 
             //Delete Button Action
             deleteButton.addEventListener('click', () => {
-                // Delete Row
-                const row = deleteButton.closest('tr'); //Row in which the button is located
-                row.remove();
-            })
+                if (confirm('Are you sure you want to delete this employee?')) {
+                    // Delete Row
+                    const row = deleteButton.closest('tr'); //Row in which the button is located
+                    row.remove();
+                } else {
+                    console.log('Deletion cancelled');
+                }
+                
+            });
 
             newRow.appendChild(actionsC);
 
