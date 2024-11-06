@@ -28,6 +28,8 @@ body {
       display: flex;
       flex-direction: column;
       gap: .5rem;
+      border: 1px solid black;
+      border-radius: 5px;
 
       legend {
         font-weight: 700;
@@ -55,5 +57,27 @@ body {
         }
       }
     }
+  }
+
+  div#employees{
+      table {
+        background-color: lightgray;
+        width: 100%; 
+        border-collapse: collapse;
+        
+        th, td {
+          border: 1px solid black;
+          padding: 10px;
+          text-align: left;
+        }
+
+        tbody {
+          background-color: lightblue;
+          border: 1px solid black;
+          padding: 10px;
+          text-align: left;
+        }
+      }
+    
   }
 }
